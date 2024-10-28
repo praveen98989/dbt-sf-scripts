@@ -1,0 +1,9 @@
+models:
+  - name: sales_stage_t
+    columns:
+      - name: salesid 
+        tests:
+          - not_null:
+              config:
+                store_failures: true
+                severity: error

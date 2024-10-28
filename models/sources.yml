@@ -1,0 +1,56 @@
+sources:
+  - name: rms1
+    database: RMS_DB
+    schema: SC 
+    tables:
+      - name: SALES_T
+      - name: CONTINET_T
+  - name: rms2
+    database: RMS_DB
+    schema: DEMO_SC 
+    tables:
+      - name: EMP_T
+
+  - name: rms3
+    database: DEV_1
+    schema: DEV_SC 
+    tables:
+      - name: DEPT_T
+
+  - name: rms4
+    database: PROD_DB
+    schema: RAW_SC 
+    tables:
+      - name: sales_details
+
+  - name: my_db
+    database: MY_DATABASE 
+    schema: MY_SCHEMA 
+    tables:
+      - name: SALES_DETAILS_T
+
+  - name: p
+    database: P_DB 
+    schema: P_SC 
+    tables:
+      - name: SALES
+
+  - name: tes 
+    database: TEST_DB
+    schema: TEST_SC
+    tables:
+      - name: SALES
+      - name: CUSTOMER_DETAILS
+
+  - name: tes1 
+    database: TESTING_DB
+    schema: SC
+    tables:
+      - name: USERS_T
+
+  - name: de 
+    database: DEMO_DB
+    schema: RAW_SC
+    tables:
+      - name: EMP90
+      - name: USERS_TAB

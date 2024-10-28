@@ -1,0 +1,7 @@
+seeds:
+  - name: counrtry_listw
+    config:
+      column_types:
+        country_code: varchar
+        country_name: varchar
+        

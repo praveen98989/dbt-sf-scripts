@@ -1,0 +1,10 @@
+models:
+  - name: users_stgae
+    tests:
+      - dups_chk_mul_cols:
+          column_names:
+            - ID
+            - NAME
+            - CITY
+          config:
+            store_failures: true  

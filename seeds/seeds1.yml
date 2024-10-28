@@ -1,0 +1,13 @@
+seeds:
+  - name: currency
+    config:
+      column_types:
+        currency_code: varchar
+  - name: counrtry_list
+    config:
+      column_types:
+        country_code: varchar
+        country_name: varchar
+  - name: emp67
+    config:
+      delimiter: "|"  

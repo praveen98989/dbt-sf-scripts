@@ -24,8 +24,11 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
-
-# Configuring models
+vars:
+  country_name: 'India'
+  country_name1: '''Australia'''
+  vwh: 'DBT_L_WH'
+  default_wh: 'DBT_WH'
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
 # In dbt, the default materialization for a model is a view. This means, when you run 
@@ -39,4 +42,22 @@ models:
   my_new_project:
     # Applies to all files under models/example/
     example:
+      +materialized: view
+      +database: DEV11_DB
+      +schema: T1
+    stg:
+      +materialized: table  
+    ds:
+      +materialized: view 
+      +secure: true
+    dl:
       +materialized: table
+      +transient: false
+      +database: T1_DB
+      +schema: T1_SC
+      +snowflake_warehouse: DBT_L_WH
+
+snapshots:
+  my_new_project:
+    snp:
+      +transient: false

@@ -1,0 +1,25 @@
+models:
+  - name: sales_stage_t5
+    columns:
+      - name: id 
+        tests:
+          - unique
+          - not_null 
+          - dbt_expectations.expect_column_value_lengths_to_equal:
+              value: 10
+      - name: mail_id
+        tests:    
+          - validate_mail        
+  - name: users_stg_t
+    tests:   
+      - duplicate_check_test:
+           column_names:
+             - id    
+             - name                   
+  - name: dept_t
+    columns:
+      - name: email_dtls
+        tests:
+          - unique
+          - not_null
+          - validate_mail            
